@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>go-agar</title>
+    <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but go-agar doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div class="wrapper">
+    <div id="gameAreaWrapper">
+        <div id="status"><span class="title">LeaderBoard</span></div>
+        <div class="chatbox" id="chatbox">
+            <ul id="chatList" class="chat-list"></ul>
+            <input id="chatInput" type="text" class="chat-input" placeholder="Chat here..." maxlength="35" />
+        </div>
+        <canvas tabindex="1" id="game"></canvas>
+    </div>
+    <div id="startMenuWrapper">
+        <div id="startMenu">
+            <p>Go Agar</p>
+            <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
+            <br />
+            <a><button id="startBtn">开始游戏</button></a>
+            <br />
+            <div id="instructions">
+                <ul>
+                    <li>在屏幕上移动鼠标来指定前进方向.</li>
+                    <li>吃掉食物、其他比你体积更小的玩家，并避免被其他玩家吃掉.</li>
+                    <li>你的质量/体积由你吃下的食物和其他玩家总量决定,并因此影响你的速度.</li>
+                    <li>质量将随时间缓慢下降.</li>
+                    <li>目标：幸存下来,成为质量最高的玩家.</li>
+                    <li>发射孢子(减少质量但增加速度): 按键 'Z'</li>
+                    <li>主动分裂: 按键 'X'</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
